@@ -1,6 +1,7 @@
 .characterEditor {
   padding-top: 128px;
   padding-bottom: 64px;
+  position: relative;
 }
 
 .maxWidthWrapper {
@@ -8,6 +9,7 @@
 
 .header {
   padding-bottom: 64px;
+  width: 65%;
 }
 
 .title {
@@ -24,7 +26,31 @@
 }
 
 .characterWrapper {
+  position: fixed;
+  min-height: 500px;
+  top: 256px;
+  height: 75vh;
+  right: calc((100vw - 1024px) / 2);
 }
 
 .controlColumn {
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .characterWrapper {
+    position: relative;
+    right: 0;
+    top: 0;
+  }
+
+  .controlColumn {
+    min-width: 100%;
+    overflow-x: auto;
+    position: relative;
+    margin-top: -300px;
+    z-index: 1;
+    display: flex;
+    gap: 1em;
+  }
 }

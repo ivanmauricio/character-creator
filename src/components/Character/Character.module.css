@@ -1,4 +1,11 @@
 .character {
   /* Fill the available container height */
   height: 100%;
+  /* width: 100%; */
+}
+
+@media (max-width: 768px) {
+  .character {
+    width: 100%;
+  }
 }
